@@ -3,45 +3,36 @@ import './Pic.css';
 
 const Cover = (props) => {
 
-    let sunScrollRate = props.scroll/2
-    let sunPosition = 57 - sunScrollRate;
-    let titleClass;
+    let sunScrollRate = (props.scroll * 6)
+    let sunPosition = 0 - sunScrollRate;
+    let titleClass, bylineSub;
 
-    if (props.scroll > 600) {
-        sunScrollRate = props.scroll/20
-    }
-
-    if (props.scroll < 2.5) {
+    if (props.scroll < .5 && titleClass === "fadeIn") {
         titleClass = "fadeOut"
     }
-    if (props.scroll > 2.5) {
+    if (props.scroll > .5) {
         titleClass = "fadeIn"
     }
-
-    // if (scrolltop < 800 && byline.classList == "fadeIn") {
-    //     byline.classList.add("fadeOut")
-    //     byline.classList.remove("fadeIn");    }
-    // if (scrolltop > 800) {
-    //     byline.classList.remove("fadeOut");
-    //     byline.classList.add("fadeIn");
-    // }
-
-    // if (scrolltop < 2200){
-    //     title.style.display = "block";
-    //     byline.style.display = "flex";
-    // } else if (scrolltop > 2200){
-    //     title.style.display = "none";
-    //     byline.style.display = "none";
-    // }
-
+    if (props.scroll > 1.7) {
+        bylineSub = "fadeIn"
+    }
+    if (props.scroll < 1.7 && bylineSub === "fadeIn") {
+        bylineSub = "fadeOut"
+    }
+    if (props.scroll > 6.5){
+        titleClass = "fadeOut"
+        bylineSub = "fadeOut"
+        sunScrollRate = (props.scroll * .05)
+    }
+    console.log("SUN POSITION", sunPosition);
         
     return(
-        <div className="pic-container">
+        <div className="pic-container cover">
             <div id="sticky-pic">
                 <h1 id="title" className={titleClass}>Chanting the Sun into the Sky</h1>
-                <div id="sun" style={{top: `${sunPosition}%`}}></div>
+                <div id="sun" style={{transform: `translateY(${sunPosition}%)`}}></div>
                 <div className="horizon"></div>
-                <div id="byline">
+                <div id="byline" className={bylineSub}>
                     <div className="author">Words | Tom Barnes </div><div className="author">Photos | Alycia Kravitz</div>
                 </div>
             </div>

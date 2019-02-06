@@ -14,12 +14,15 @@ body {
 }
 
 .pic-container {
-    margin: 0 auto 7em;
+    margin: 0 auto 50vh;
     width: 100%;
     height: 265vh;
-    font-size: 200%;
     background-color: black;
     padding-top: 4em;
+}
+
+.cover {
+    font-size: 200%;
 }
 
 .sticky-pic {
@@ -43,7 +46,7 @@ body {
 #sun {
     position: fixed;
     margin: auto;
-    top: 57%;
+    top: 52.5%;
     right: 0;
     left: 0;
     background-color: white;
@@ -60,7 +63,7 @@ body {
     right: 0;
     margin: 0 auto;
     position: fixed;
-    margin-top: 45px;
+    margin-top: 5px;
 }
 
 .horizon::after {
@@ -86,7 +89,7 @@ body {
     font-size: 60%;
     opacity: 0;
     position: fixed;
-    top: 45%;
+    top: 55%;
     font-family: 'Lato', sans-serif;
     color: white;
     display: flex;
@@ -136,64 +139,21 @@ body {
     100% { opacity: 0; }
 }
 
+/* PARTICLE STYLES */
 
-
-/* .photo {
-    -webkit-mask-image: -webkit-gradient(linear, left 95%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
-} */
-
-
-/* body {
-    margin: 0px;
+.particleWrap {
+    position: fixed;
+    width: 100vw;
+    height: 50vh;
 }
 
-#the-view {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#bg-photos-view {
-    top: 0;
-    position: absolute;
-}
-
-
-#title-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 13em;
-    height: 100vh;
-}
-
-#the-title {
-    font-size: 300%;
-    font-family: 'Julius Sans One', sans-serif;
-}
-
-.epigraph {
-    z-index: 9999;
-    margin: 0 auto;
-    position: absolute;
-    font-size: 150%;
-    top: 30%;
-    left: 0;
-    right: 0;
-    width: 20em;
-    text-align: center;
-    margin: auto;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    
-    opacity: 0;
-}
+/* POEM STYLES */
 
 .intro {
     z-index: 9999;
     font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 115%;
     position: absolute;
     top: 14%;
     left: 0;
@@ -201,68 +161,7 @@ body {
     width: 60em;
     color: white;
     margin: auto;
-    background: rgba(17, 35, 69, 0.3);
-    padding: 3.5em 3.5em 4.4em 3.5em;
+    background: rgba(17, 35, 69, 0.377);
+    padding: 3.5em 3.5em 4em 3.5em;
     line-height: 1.4;
 }
-
-.subtitle {
-    font-size: 110%;
-    font-family: 'Lato', sans-serif;
-}
-
-.photo-slide {
-    width: 100%;
-    margin: 5em 0em 5em 0em;
-    position: relative;
-    top: 0;
-    opacity: 0;
-}
-
-.poem {
-    background-color: rgba(32, 32, 32, 0.9);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 100%;
-    color: white;
-    position: absolute;
-    top: 25%;
-    right: 15%;
-    z-index: 9999;
-    padding: 4em 3.7em 4.4em 3.7em;
-    line-height: 1.5;
-    border: 1px solid rgb(136, 136, 136);
-    box-shadow: 12px 12px 10px #d6d6d6;
-    opacity: 0;
-}
-
-.show {
-    animation: show 3s forwards;
-}
-
-.fade {
-    animation: fadee 3s forwards;
-}
-
-
-.sticky {
-    position: sticky;
-    top: 0;
-}
-
-@keyframes show {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fader {
-    from {
-        opacity: 1;
-    } to {
-        opacity: 0;
-    }
-}
- */

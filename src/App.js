@@ -3,6 +3,7 @@ import './App.css';
 import Pic from './components/Pic';
 import Cover from './components/Cover';
 import picData from './data/picData'
+import ParticlesWrapper from './components/ParticlesWrapper';
 
 class App extends Component {
   constructor() {
@@ -52,11 +53,12 @@ class App extends Component {
 
   render() {
     const pics = this.state.picData.map((pic) => {
-      return <Pic key={pic.id} info={pic} />
+      return <Pic key={pic.id} info={pic} scroll={this.state.scroll} />
     })
 
     return (
       <div className="App">
+        <ParticlesWrapper/>
         <Cover scroll={this.state.scroll}/>
         {pics}
       </div>
