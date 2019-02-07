@@ -8,12 +8,13 @@ const picData = [
     {
         id: 2,
         imgPath: 'images/static.jpg',
-        poem: true,
+        poem: false,
     },
     {
         id: 3,
         imgPath: 'images/zenarcade.jpg',
-        poem: true,
+        poem: "right",
+        text: '<p><strong>Zen Arcade (Ameya-Yokochō)</strong></p><p>It is said</br>Bodhisattva Nishijin</br>Sat 40 days and nights</br>Under the glare of the</br>Pachinko machine</br>Before he realized</br>The true path to the jackpot</br>Was the Middle Way</p>',
     },
     {
         id: 4,

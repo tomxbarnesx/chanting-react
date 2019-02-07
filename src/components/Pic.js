@@ -8,12 +8,18 @@ const Pic = (props) => {
     let poemStyles;
 
     if (props.scroll < (7 * props.info.id)){
-        poemStyles = "intro fadeOut"
+        if (props.info.id === 1){
+            poemStyles = "intro fadeOut"
+        } else {
+            poemStyles = "poem fadeOut"
+        }
     }
 
     if (props.scroll > (7 * props.info.id)) {
         if (props.info.id === 1){
             poemStyles = "intro fadeIn"
+        } else if (props.info.id !== 1 && props.info.poem !== false){
+            poemStyles = "poem fadeIn"
         }
     }
 
