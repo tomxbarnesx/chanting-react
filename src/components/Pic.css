@@ -112,6 +112,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     position: absolute;
+    text-align:left;
     /* font-size: 100%; */
     top: 30%;
     right: -50%;

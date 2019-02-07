@@ -41,7 +41,7 @@ const picData = [
         poem: "midDown",
         scrollTrigger: 36.5,
         scrollMultiplier: 4.7,
-        text: '<p><strong>Hangover Senryu | (Sensō-ji)</strong></p><p>Octopus limbs spasm</br>Under drizzles of soy sauce</br>Behind my eyes</p>'
+        text: '<p><strong>Hangover Senryu (Sensō-ji)</strong></p><p>Octopus limbs spasm</br>Under drizzles of soy sauce</br>Behind my eyes</p>'
     },
     {
         id: 7,
