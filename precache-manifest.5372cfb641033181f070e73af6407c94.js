@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/chanting-react/static/js/runtime~main.b0fb4cb8.js"
   },
   {
-    "revision": "8cd7e6e81d063428e2d9",
-    "url": "/chanting-react/static/js/main.8cd7e6e8.chunk.js"
+    "revision": "0558468904a3e7041f21",
+    "url": "/chanting-react/static/js/main.05584689.chunk.js"
   },
   {
     "revision": "633607e3d63de35bf266",
     "url": "/chanting-react/static/js/1.633607e3.chunk.js"
   },
   {
-    "revision": "8cd7e6e81d063428e2d9",
-    "url": "/chanting-react/static/css/main.3d18f079.chunk.css"
+    "revision": "0558468904a3e7041f21",
+    "url": "/chanting-react/static/css/main.0cabd6c8.chunk.css"
   },
   {
-    "revision": "d3373772247e31d43b4edd6cd235040c",
+    "revision": "8f79d297919b35d2ecdbce4c153545d4",
     "url": "/chanting-react/index.html"
   }
 ];
