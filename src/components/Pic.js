@@ -5,9 +5,10 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 
 const Pic = (props) => {
 
-    let poemStyles;
+    let poemStyles, poemXPosition, poemYPosition;
+    let scrollMultiplier;
 
-    if (props.scroll < (7 * props.info.id)){
+    if (props.scroll < props.info.scrollTrigger){
         if (props.info.id === 1){
             poemStyles = "intro fadeOut"
         } else {
@@ -15,19 +16,32 @@ const Pic = (props) => {
         }
     }
 
-    if (props.scroll > (7 * props.info.id)) {
+    if (props.scroll > props.info.scrollTrigger) {
         if (props.info.id === 1){
             poemStyles = "intro fadeIn"
-        } else if (props.info.id !== 1 && props.info.poem !== false){
+        } else if (props.info.id > 1 && props.info.poem !== false){
             poemStyles = "poem fadeIn"
+            if (props.scroll < (props.info.scrollTrigger + 1.3) && props.info.poem === "right"){
+                poemXPosition = 0 - (props.scroll * props.info.scrollMultiplier);
+                poemYPosition = 0;
+                console.log("POSITION", poemXPosition)
+            } else if (props.scroll < (props.info.scrollTrigger + 1.3) && props.info.poem === "midDown"){
+                poemXPosition = -400
+                poemYPosition = -165 + (props.scroll * props.info.scrollMultiplier);
+            } else if (props.scroll < (props.info.scrollTrigger + 1.3) && props.info.poem === "left"){
+                poemXPosition = -650 + (props.scroll * props.info.scrollMultiplier);
+                poemYPosition = -10;
+            }
         }
     }
 
     return (
         <div className="pic-container">
             <div className="sticky-pic">
+                <div className="relContainer">
                 <img className="photo" src={props.info.imgPath}/>
-                <div className={poemStyles}>{ReactHtmlParser(props.info.text)}</div>
+                <div className={poemStyles} style={{transform: `translate(${poemXPosition}%, ${poemYPosition}%)`}}>{ReactHtmlParser(props.info.text)}</div>
+                </div>
             </div>
         </div>
     )
