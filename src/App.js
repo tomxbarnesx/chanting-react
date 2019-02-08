@@ -4,6 +4,7 @@ import Pic from './components/Pic';
 import Cover from './components/Cover';
 import picData from './data/picData'
 import ParticlesWrapper from './components/ParticlesWrapper';
+import Inari from './components/Inari';
 
 class App extends Component {
   constructor() {
@@ -52,7 +53,10 @@ class App extends Component {
   }
 
   render() {
-    const pics = this.state.picData.map((pic) => {
+    const pics = this.state.picData.slice(0, 8).map((pic) => {
+      return <Pic key={pic.id} info={pic} scroll={this.state.scroll} />
+    })
+    const pics2 = this.state.picData.slice(9).map((pic) => {
       return <Pic key={pic.id} info={pic} scroll={this.state.scroll} />
     })
 
@@ -61,6 +65,8 @@ class App extends Component {
         <ParticlesWrapper/>
         <Cover scroll={this.state.scroll}/>
         {pics}
+        <Inari scroll={this.state.scroll}/>
+        {pics2}
       </div>
         
     );

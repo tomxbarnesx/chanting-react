@@ -26,7 +26,7 @@ const Pic = (props) => {
                 poemYPosition = 0;
                 console.log("POSITION", poemXPosition)
             } else if (props.scroll < (props.info.scrollTrigger + 1.3) && props.info.poem === "midDown"){
-                poemXPosition = -400
+                poemXPosition = -402
                 poemYPosition = -165 + (props.scroll * props.info.scrollMultiplier);
             } else if (props.scroll < (props.info.scrollTrigger + 1.3) && props.info.poem === "left"){
                 poemXPosition = -650 + (props.scroll * props.info.scrollMultiplier);
@@ -39,8 +39,8 @@ const Pic = (props) => {
         <div className="pic-container">
             <div className="sticky-pic">
                 <div className="relContainer">
-                <img className="photo" src={props.info.imgPath}/>
-                <div className={poemStyles} style={{transform: `translate(${poemXPosition}%, ${poemYPosition}%)`}}>{ReactHtmlParser(props.info.text)}</div>
+                    <img className="photo" src={props.info.imgPath}/>
+                    <div className={poemStyles} style={{transform: `translate(${poemXPosition}%, ${poemYPosition}%)`}}>{ReactHtmlParser(props.info.text)}</div>
                 </div>
             </div>
         </div>

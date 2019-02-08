@@ -3,7 +3,7 @@ import './Pic.css';
 
 const Cover = (props) => {
 
-    let sunScrollRate = (props.scroll * 6)
+    let sunScrollRate = (props.scroll * 8)
     let sunPosition = 0 - sunScrollRate;
     let titleClass, bylineSub;
 

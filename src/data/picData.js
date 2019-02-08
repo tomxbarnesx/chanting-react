@@ -53,13 +53,19 @@ const picData = [
     },
     {
         id: 8,
-        imgPath: 'images/eating.jpg',
-        poem: true,
+        imgPath: 'images/market.jpg',
+        poem: "left",
+        scrollTrigger: 48,
+        scrollMultiplier: 2.5,
+        text: '<p><strong>Tomorrow’s tofu | (Koyasan)</strong></p><p>Lotus locked</br>His mummy lips</br>Only smile before his</br>Blooded sangha’s</br>Precious meals</p><p>He critiques</br>His kitchen</br>In dream:</p<p>“Treat your tempura</br>Like those who would be</br>Your enemies —</br>With love and</br>Strong determination</br>To right their path.”</p><p>Pray and improve</br>Tomorrow’s tofu.'
     },
     {
         id: 9,
-        imgPath: 'images/market.jpg',
-        poem: true,
+        imgPath: 'images/harajuku.jpg',
+        poem: 'midDown',
+        scrollTrigger: 54,
+        scrollMultiplier: 2.3,
+        text: '<p><strong>Rare Sidewalk Stain | (Harajuku)</strong></p><p>Nobody look</br>A rat,</br>Which once was</br>Pikachu,</br>Has been trampled<br>In Harajuku</p>'
     },
     {
         id: 10,
