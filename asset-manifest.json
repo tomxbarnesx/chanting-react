@@ -1,13 +1,14 @@
 {
-  "main.css": "/chanting-react/static/css/main.0cabd6c8.chunk.css",
-  "main.js": "/chanting-react/static/js/main.05584689.chunk.js",
-  "main.js.map": "/chanting-react/static/js/main.05584689.chunk.js.map",
-  "static/js/1.633607e3.chunk.js": "/chanting-react/static/js/1.633607e3.chunk.js",
-  "static/js/1.633607e3.chunk.js.map": "/chanting-react/static/js/1.633607e3.chunk.js.map",
+  "main.css": "/chanting-react/static/css/main.a71d1a36.chunk.css",
+  "main.js": "/chanting-react/static/js/main.8c721f21.chunk.js",
+  "main.js.map": "/chanting-react/static/js/main.8c721f21.chunk.js.map",
+  "static/js/1.764b4044.chunk.js": "/chanting-react/static/js/1.764b4044.chunk.js",
+  "static/js/1.764b4044.chunk.js.map": "/chanting-react/static/js/1.764b4044.chunk.js.map",
   "runtime~main.js": "/chanting-react/static/js/runtime~main.b0fb4cb8.js",
   "runtime~main.js.map": "/chanting-react/static/js/runtime~main.b0fb4cb8.js.map",
-  "static/css/main.0cabd6c8.chunk.css.map": "/chanting-react/static/css/main.0cabd6c8.chunk.css.map",
+  "static/media/inari.png": "/chanting-react/static/media/inari.35d63e2f.png",
+  "static/css/main.a71d1a36.chunk.css.map": "/chanting-react/static/css/main.a71d1a36.chunk.css.map",
   "index.html": "/chanting-react/index.html",
-  "precache-manifest.5372cfb641033181f070e73af6407c94.js": "/chanting-react/precache-manifest.5372cfb641033181f070e73af6407c94.js",
+  "precache-manifest.2ba567aa0c66764d8291d795fcea98c6.js": "/chanting-react/precache-manifest.2ba567aa0c66764d8291d795fcea98c6.js",
   "service-worker.js": "/chanting-react/service-worker.js"
 }

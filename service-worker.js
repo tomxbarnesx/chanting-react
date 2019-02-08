@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chanting-react/precache-manifest.5372cfb641033181f070e73af6407c94.js"
+  "/chanting-react/precache-manifest.2ba567aa0c66764d8291d795fcea98c6.js"
 );
 
 workbox.clientsClaim();
