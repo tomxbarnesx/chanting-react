@@ -20,6 +20,9 @@ body {
     background-color: black;
     padding-top: 4em;
 }
+.pic-container.white {
+    background-color: white;
+}
 
 .cover {
     font-size: 200%;
@@ -87,6 +90,18 @@ body {
     border-radius: 50%;
 }
 
+#blackSun {
+    position: fixed;
+    margin: auto;
+    top: 18%;
+    right: 0;
+    left: 0;
+    background-color: black;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+}
+
 .horizon {
     top: 50%;
     border-top: 2px solid white;
@@ -98,12 +113,20 @@ body {
     margin-top: 5px;
 }
 
+.horizon.white {
+    border-top: 2px solid black;
+}
+
 .horizon::after {
     content: '';
     display: block;
     z-index: 4;
     background-color: black;
     height: 5em;
+}
+
+.horizon.white::after {
+    background-color: white;
 }
 
 #title {
@@ -164,6 +187,15 @@ body {
 
 .fadeOut {
     animation: faderOut 1s forwards;
+}
+
+.dip {
+    animation: dip 2s ease-in forwards;
+}
+
+@keyframes dip {
+    0% {transform: translateY(0%)}
+    100% {transform: translateY(200%)}
 }
 
 @keyframes faderIn {

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Pic from './components/Pic';
 import Cover from './components/Cover';
-import picData from './data/picData'
+import picData from './data/picData';
+import BlackParticles from './components/BlackParticles';
 import ParticlesWrapper from './components/ParticlesWrapper';
 import Inari from './components/Inari';
 
@@ -11,13 +12,41 @@ class App extends Component {
     super();
     this.state = {
       picData: picData,
-      scroll: 0
+      start: false, 
+      scroll: 0,
     }
     this.handleScroll = this.handleScroll.bind(this)
+    this.handleSunClick = this.handleSunClick.bind(this)
+    this.MouseWheelHandler = this.MouseWheelHandler.bind(this)
+    this.disableScroll = this.disableScroll.bind(this)
+    this.unlock = this.unlock.bind(this)
+  }
+
+  disableScroll() {
+    console.log(this.state.start)
+    const App = document.getElementsByClassName('App')[0];
+    App.addEventListener("mousewheel", this.MouseWheelHandler, true);
+    App.addEventListener("DOMMouseScroll", this.MouseWheelHandler, true);
+  }
+
+  unlock() {
+    const App = document.getElementsByClassName('App')[0];
+    App.removeEventListener("mousewheel", this.MouseWheelHandler, true);
+    App.removeEventListener("DOMMouseScroll", this.MouseWheelHandler, true);
+    this.setState({start: true})
+    console.log(this.state.start)
+  }
+
+  MouseWheelHandler = (e) => {
+    e.preventDefault();
+    return false;
   }
 
   componentDidMount(){
     window.addEventListener("scroll", this.handleScroll);
+    if (this.state.start === false && this.state.scroll === 0){
+      this.disableScroll()
+    }
   }
 
   componentWillUnmount(){
@@ -33,6 +62,14 @@ class App extends Component {
         time = Date.now()
       }
     }
+  }
+
+  handleSunClick(e){
+    this.setState({
+      start: true
+    })
+    this.unlock()
+    e.target.classList.add("dip")
   }
 
   handleScroll() {
@@ -53,6 +90,7 @@ class App extends Component {
   }
 
   render() {
+
     const pics = this.state.picData.slice(0, 8).map((pic) => {
       return <Pic key={pic.id} info={pic} scroll={this.state.scroll} />
     })
@@ -60,10 +98,17 @@ class App extends Component {
       return <Pic key={pic.id} info={pic} scroll={this.state.scroll} />
     })
 
+    let particles;
+    if(this.state.start === true) {
+      particles = <ParticlesWrapper scroll={this.state.scroll}/>
+    } else {
+      particles = <BlackParticles />
+    }
+
     return (
       <div className="App">
-        <ParticlesWrapper/>
-        <Cover scroll={this.state.scroll}/>
+        {particles}
+        <Cover handleSunClick={this.handleSunClick} scroll={this.state.scroll}/>
         {pics}
         <Inari scroll={this.state.scroll}/>
         {pics2}

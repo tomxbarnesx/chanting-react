@@ -5,7 +5,15 @@ const Cover = (props) => {
 
     let sunScrollRate = (props.scroll * 8)
     let sunPosition = 0 - sunScrollRate;
-    let titleClass, bylineSub;
+    let titleClass, bylineSub, coverClasses, blackSunStyles, horizonStyles;
+
+    if (props.scroll === 0) {
+        coverClasses = "pic-container white cover"
+        horizonStyles = "horizon white"
+    } else {
+        coverClasses = "pic-container cover"
+        horizonStyles = "horizon"
+    }
 
     if (props.scroll < .5 && titleClass === "fadeIn") {
         titleClass = "fadeOut"
@@ -27,11 +35,12 @@ const Cover = (props) => {
     console.log("SUN POSITION", sunPosition);
         
     return(
-        <div className="pic-container cover">
+        <div className={coverClasses}>
             <div id="sticky-pic">
                 <h1 id="title" className={titleClass}>Chanting the Sun into the Sky</h1>
+                <div id="blackSun" onClick={props.handleSunClick}></div>
                 <div id="sun" style={{transform: `translateY(${sunPosition}%)`}}></div>
-                <div className="horizon"></div>
+                <div className={horizonStyles}></div>
                 <div id="byline" className={bylineSub}>
                     <div className="author">Words | Tom Barnes </div><div className="author">Photos | Alycia Kravitz</div>
                 </div>
