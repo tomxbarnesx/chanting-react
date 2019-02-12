@@ -99,7 +99,7 @@ class App extends Component {
     })
 
     let particles;
-    if(this.state.start === true) {
+    if(this.state.scroll > 0) {
       particles = <ParticlesWrapper scroll={this.state.scroll}/>
     } else {
       particles = <BlackParticles />
